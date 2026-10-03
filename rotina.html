@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyFlow</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- MENU LATERAL -->
+    <aside class="sidebar">
+
+         <div class="logo">
+            <img src="logo.png" class="logo-image" alt="StudyFlow">
+            <span>StudyFlow</span>
+         </div>
+
+        <nav class="menu">
+
+            <a href="#" class="menu-item">
+                <span class="menu-icon">⌂</span>
+                <span>Início</span>
+            </a>
+
+            <a href="rotina.html" class="menu-item active">
+                <span class="menu-icon">✓</span>
+                <span>Minha rotina</span>
+            </a>
+
+            <a href="acompanhamento.html" class="menu-item">
+                <span class="menu-icon">◉</span>
+                <span>Acompanhamento</span>
+            </a>    
+        </nav>
+
+    </aside>
+
+
+    <!-- CONTEÚDO -->
+    <main class="main">
+
+        <!-- CABEÇALHO -->
+        <header class="header">
+
+            <div>
+
+                <p class="eyebrow">
+                    Planeje seus estudos
+                </p>
+
+                <h1>
+                    Minha rotina
+                </h1>
+
+            </div>
+
+            <select class="period-select">
+
+                <option>Esta semana</option>
+
+                <option>Próxima semana</option>
+
+            </select>
+
+        </header>
+
+
+        <!-- ÁREA PRINCIPAL -->
+        <section class="study-layout">
+
+
+            <!-- CRIAR ESTUDO -->
+            <div class="study-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <span class="card-kicker">
+                            Novo estudo
+                        </span>
+
+                        <h2>
+                            O que você quer estudar?
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="routine-form">
+
+
+                    <!-- MATÉRIA -->
+       <div class="form-group">
+
+             <label for="materia">
+              Matéria
+             </label>
+
+        <select
+          class="subject-select"
+          id="materia">
+
+          <option value="">
+            Escolha uma matéria
+          </option>
+
+          <option value="Matemática">
+            Matemática
+          </option>
+
+          <option value="História">
+            História
+          </option>
+
+          <option value="Português">
+            Português
+          </option>
+
+          <option value="Inglês">
+            Inglês
+          </option>
+
+          <option value="Ciências">
+            Ciências
+          </option>
+
+          <option value="Programação">
+            Programação
+          </option>
+
+        </select>
+
+       </div>
+
+
+                    <!-- CONTEÚDO -->
+                    <div class="form-group">
+
+                        <label>
+                            O que você vai estudar?
+                        </label>
+
+                        <input
+                            type="text"
+                            id="conteudo"
+                            class="routine-input"
+                            placeholder="Ex.: Funções do 2º grau"
+                        >
+
+                    </div>
+
+
+                    <!-- DATA E HORÁRIO -->
+                    <div class="form-row">
+                      <div class="form-row">
+
+    <div class="form-group">
+
+        <label for="dataEstudo">
+            Dia
+        </label>
+
+        <input
+            type="text"
+            id="dataEstudo"
+            class="routine-input"
+            placeholder="DD/MM/AAAA"
+            maxlength="10"
+            inputmode="numeric"
+            autocomplete="off"
+        >
+
+        <small class="input-error" id="erroData"></small>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="horaEstudo">
+            Horário
+        </label>
+
+        <input
+            type="text"
+            id="horaEstudo"
+            class="routine-input"
+            placeholder="HH:MM"
+            maxlength="5"
+            inputmode="numeric"
+            autocomplete="off"
+        >
+
+        <small class="input-error" id="erroHora"></small>
+
+    </div>
+
+</div>
+
+
+                    <!-- DURAÇÃO -->
+<!-- DURAÇÃO -->
+<div class="form-group">
+
+    <label>
+        Quanto tempo você quer estudar?
+    </label>
+
+    <div class="duration-row">
+
+        <input
+            type="number"
+            id="duracaoHoras"
+            class="routine-input"
+            min="0"
+            max="23"
+            value="0"
+            placeholder="0">
+
+        <span class="duration-label">
+            horas
+        </span>
+
+
+        <input
+            type="number"
+            id="duracaoMinutos"
+            class="routine-input"
+            min="0"
+            max="59"
+            value="30"
+            placeholder="30">
+
+        <span class="duration-label">
+            minutos
+        </span>
+
+    </div>
+
+    <small
+        class="input-error"
+        id="erroDuracao">
+    </small>
+
+</div>
+
+                    <button
+                         class="btn btn-primary routine-button"
+                         id="adicionarRotina">
+                         + Adicionar à minha rotina
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ESTUDOS PROGRAMADOS -->
+            <div class="subjects-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <span class="card-kicker">
+                            Seus estudos
+                        </span>
+
+                        <h2>
+                            Próximos estudos
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="scheduled-list" id="listaEstudos">
+
+                </div>
+
+            </div>
+
+        </section>
+        
+    </main>
+
+</div>
+   <script src="rotina.js"></script>
+</body>
+</html>
