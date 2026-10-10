@@ -4,403 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>StudyFlow</title>
+    <title>StudyFlow - Login</title>
 
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="login.css">
 </head>
 
-    <body>
+<body>
 
-    <div class="app">
+    <main class="login-container">
 
-        <!-- =========================
-             MENU LATERAL
-        ========================== -->
-        <aside class="sidebar">
+        <section class="login-card">
 
             <div class="logo">
-               <img src="logo.png" class="logo-image" alt="StudyFlow">
-               <span>StudyFlow</span>
+                <div class="logo-icon"> 
+                    <img src="logo.png" alt="StudyFlow" class="logo-icon">
+                  </div>
+                
+                <h1>Study<span>Flow</span></h1>
             </div>
 
-            <nav class="menu">
+            <div class="welcome">
+                <h2>Bem-vindo de volta!</h2>
+                <p>Entre para continuar sua rotina de estudos.</p>
+            </div>
 
-                <a href="#" class="menu-item">
-                    <span class="menu-icon">⌂</span>
-                    <span>Início</span>
-                </a>
+            <form id="loginForm">
 
-                <a href="rotina.html" class="menu-item">
-                    <span class="menu-icon">✓</span>
-                    <span>Minha rotina</span>
-                </a>
-
-                <a href="#" class="menu-item active">
-                    <span class="menu-icon">◉</span>
-                    <span>Acompanhamento</span>
-                </a>
-
-            </nav>
-
-        </aside>
-
-
-        <!-- =========================
-             CONTEÚDO PRINCIPAL
-        ========================== -->
-
-        <main class="main">
-
-            <header class="header">
-
-                <div>
-                    <p class="eyebrow">Seu progresso</p>
-                    <h1>Acompanhamento</h1>
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
                 </div>
 
-                <select class="period-select">
-                    <option>Esta semana</option>
-                    <option>Este mês</option>
-                    <option>Hoje</option>
-                </select>
-
-            </header>
-
-
-            <!-- =========================
-                 CARDS DE RESUMO
-            ========================== -->
-
-            <section class="stats">
-
-                <div class="stat-card">
-
-                    <div class="stat-top">
-                        <div class="stat-icon blue">◷</div>
-                        <span class="positive">+12%</span>
+                <div class="input-group">
+                    <div class="password-label">
+                        <label for="senha">Senha</label>
                     </div>
 
-                    <span class="stat-label">Tempo estudado</span>
-
-                    <strong id="totalTime">0h 00min</strong>
-
-                    <small>nesta semana</small>
-
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                        required
+                    >
                 </div>
 
+                
 
-                <div class="stat-card">
+                <button type="submit" class="login-button">
+                    Entrar
+                </button>
 
-                    <div class="stat-top">
-                        <div class="stat-icon purple">✓</div>
-                        <span class="positive">+8%</span>
-                    </div>
+                <p id="mensagem"></p>
 
-                    <span class="stat-label">Sessões concluídas</span>
+            </form>
 
-                    <strong id="totalSessions">0</strong>
 
-                    <small>sessões realizadas</small>
 
-                </div>
+        </section>
 
+    </main>
 
-                <div class="stat-card">
+    <script src="login.js"></script>
+    
 
-                    <div class="stat-top">
-                        <div class="stat-icon green">◉</div>
-                        <span class="positive">+5%</span>
-                    </div>
-
-                    <span class="stat-label">Taxa de conclusão</span>
-
-                    <strong id="completionRate">0%</strong>
-
-                    <small>das sessões planejadas</small>
-
-                </div>
-
-
-                <div class="stat-card goal-card">
-
-    <div class="stat-top">
-
-        <div class="stat-icon yellow">
-            ★
-        </div>
-
-        <button
-           class="goal-edit"
-           onclick="openGoalModal()">
-           Editar
-</button>
-
-    </div>
-
-    <span class="stat-label">
-        Meta semanal
-    </span>
-
-    <strong id="weeklyGoal">
-        16h
-    </strong>
-
-    <small id="remainingGoal">
-        16h restantes
-    </small>
-
-</div>
-
-
-            </section>
-
-
-            <!-- =========================
-                 ÁREA DE ESTUDO
-            ========================== -->
-
-            <section class="study-layout">
-
-
-                <!-- TIMER -->
-
-                <div class="study-card timer-card">
-
-                    <div class="card-heading">
-
-                        <div>
-                            <span class="card-kicker">Sessão atual</span>
-                            <h2>Tempo de estudo</h2>
-                        </div>
-
-                        <span class="live-indicator" id="statusIndicator">
-                            Pronto
-                        </span>
-
-                    </div>
-
-
-                    <div class="timer">
-
-                        <span id="timerDisplay">00:00:00</span>
-
-                    </div>
-
-
-                    <div class="subject-area">
-
-                        <label for="subject">
-                            Matéria
-                        </label>
-
-                        <select id="subject" class="subject-select">
-
-                            <option value="">
-                                Selecione uma matéria
-                            </option>
-
-                            <option value="Matemática">
-                                Matemática
-                            </option>
-
-                            <option value="Português">
-                                Português
-                            </option>
-
-                            <option value="Física">
-                                Física
-                            </option>
-
-                            <option value="História">
-                                História
-                            </option>
-
-                            <option value="Química">
-                                Química
-                            </option>
-
-                            <option value="Programação">
-                                Programação
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="timer-actions">
-
-                        <button
-                            class="btn btn-primary"
-                            id="startButton"
-                            onclick="toggleTimer()">
-
-                            ▶ Iniciar estudo
-
-                        </button>
-
-                        <button
-                            class="btn btn-success"
-                            id="finishButton"
-                            onclick="finishSession()"
-                            disabled>
-
-                            ✓ Concluir sessão
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-                <!-- SESSÕES -->
-
-                <div class="study-card sessions-card">
-
-                    <div class="card-heading">
-
-                        <div>
-                            <span class="card-kicker">
-                                Registro
-                            </span>
-
-                            <h2>Sessões recentes</h2>
-                        </div>
-
-                        <span class="session-count" id="sessionCount">
-                            0
-                        </span>
-
-                    </div>
-
-
-                    <div
-                        class="sessions-list"
-                        id="sessionsList">
-
-                        <div class="empty-state">
-
-                            <div class="empty-icon">
-                                ◷
-                            </div>
-
-                            <strong>
-                                Nenhuma sessão ainda
-                            </strong>
-
-                            <p>
-                                Comece a estudar e suas sessões
-                                aparecerão aqui.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-                       
-            <!-- =========================PLANEJAMENTO DA ROTINA ========================== -->
-
-            <section class="subjects-card" style="margin-top: 24px;">
-
-                <div class="card-heading">
-
-                    <div>
-
-                        <span class="card-kicker">
-                            Minha rotina
-                        </span>
-
-                        <h2>
-                            Planejamento dos estudos
-                        </h2>
-
-                    </div>
-
-                    <span
-                        class="session-count"
-                        id="plannedCount">
-                        0
-                    </span>
-
-                </div>
-
-
-                <div
-                    class="sessions-list"
-                    id="planningList">
-
-                    <div class="empty-state">
-
-                        <div class="empty-icon">
-                            📚
-                        </div>
-
-                        <strong>
-                            Nenhum estudo planejado
-                        </strong>
-
-                        <p>
-                            Adicione estudos em
-                            "Minha rotina".
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-        </main>
-
-    </div>
-    <script src="acompanhamento.js"></script>
-    <div class="goal-modal" id="goalModal">
-
-    <div class="goal-modal-content">
-
-        <button
-            class="goal-modal-close"
-            onclick="closeGoalModal()">
-            ×
-        </button>
-
-        <h3>Definir meta semanal</h3>
-
-        <p>
-            Quantas horas você quer estudar por semana?
-        </p>
-
-        <input
-            type="number"
-            id="goalInput"
-            min="1"
-            step="0.5"
-            placeholder="Ex: 16">
-
-        <div class="goal-modal-actions">
-
-            <button
-                class="goal-cancel"
-                onclick="closeGoalModal()">
-                Cancelar
-            </button>
-
-            <button
-                class="goal-save"
-                onclick="saveGoal()">
-                Salvar meta
-            </button>
-
-        </div>
-
-    </div>
-
-</div>
 </body>
 </html>

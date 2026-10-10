@@ -45,6 +45,18 @@ function salvarEstudos() {
 // ADICIONAR ESTUDO
 // ========================================
 
+function formatarData(data) {
+
+    if (!data) {
+        return "";
+    }
+
+    const partes = data.split("-");
+
+    return `${partes[2]}/${partes[1]}/${partes[0]}`;
+}
+
+
 function adicionarEstudo() {
 
     const materiaValor = materia.value;
@@ -127,7 +139,7 @@ function adicionarEstudo() {
 
         conteudo: conteudoValor,
 
-        data: dataValor,
+        data: formatarData(dataEstudo.value),   
 
         hora: horaValor,
 

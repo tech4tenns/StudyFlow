@@ -1,0 +1,689 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #20252b;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.login-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+    background: #ffffff;
+    padding: 42px;
+    border-radius: 18px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 38px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+
+    background: #2f6fed;
+    color: white;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo h1 span {
+    color: #2f6fed;
+}
+
+
+
+.welcome {
+    margin-bottom: 28px;
+}
+
+.welcome h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #747b83;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: 100%;
+    height: 48px;
+
+    border: 1px solid #d9dee5;
+    border-radius: 9px;
+
+    padding: 0 14px;
+
+    font-size: 14px;
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.10);
+}
+
+
+
+.password-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.password-label a {
+    font-size: 12px;
+    color: #2f6fed;
+    text-decoration: none;
+}
+
+.password-label a:hover {
+    text-decoration: underline;
+}
+
+
+
+.remember {
+    margin-bottom: 22px;
+}
+
+.remember label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #656c74;
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.remember input {
+    width: 15px;
+    height: 15px;
+    accent-color: #2f6fed;
+}
+
+
+
+.login-button {
+    width: 100%;
+    height: 48px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #2f6fed;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.login-button:hover {
+    background: #245dcc;
+    transform: translateY(-1px);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+
+
+#mensagem {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 30px 0 22px;
+
+    color: #a0a6ad;
+    font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+
+    background: #e5e8eb;
+}
+
+
+
+.register {
+    text-align: center;
+
+    font-size: 13px;
+    color: #737a82;
+}
+
+.register a {
+    color: #2f6fed;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 480px) {
+
+    .login-card {
+        padding: 30px 24px;
+    }
+
+    .welcome h2 {
+        font-size: 22px;
+    }
+
+}
+* {
+    box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
+    .login-container {
+        width: 100%;
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 16px;
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 420px;
+        padding: 32px 24px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .welcome {
+        text-align: center;
+    }
+
+    .welcome h2 {
+        font-size: 24px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .input-group input {
+        width: 100%;
+        min-width: 0;
+        font-size: 16px;
+    }
+
+    .login-button {
+        width: 100%;
+        min-height: 48px;
+        cursor: pointer;
+    }
+
+    .register {
+        text-align: center;
+        line-height: 1.6;
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+
+    .login-container {
+        padding: 16px 12px;
+    }
+
+    .login-card {
+        padding: 24px 16px;
+    }
+
+    .logo h1 {
+        font-size: 25px;
+    }
+
+    .welcome h2 {
+        font-size: 21px;
+    }
+
+    .password-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .password-label a {
+        font-size: 12px;
+    }
+}
+.logo-icon {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.cadastro-container {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #f1f5f9;
+}
+
+.cadastro-card {
+    background: white;
+    width: 100%;
+    max-width: 430px;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.cadastro-card .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.cadastro-card .logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.cadastro-card .logo h1 {
+    font-size: 28px;
+    color: #1e293b;
+}
+
+.cadastro-card .logo span {
+    color: #2563eb;
+}
+
+.cadastro-card .welcome {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.cadastro-card .welcome h2 {
+    font-size: 24px;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.cadastro-card .welcome p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.cadastro-card .input-group {
+    margin-bottom: 20px;
+}
+
+.cadastro-card .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #334155;
+}
+
+.cadastro-card .input-group input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.cadastro-card .input-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.cadastro-button {
+    width: 100%;
+    padding: 15px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cadastro-button:hover {
+    background: #1d4ed8;
+}
+
+.cadastro-card #mensagem {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 25px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+    .cadastro-container {
+        padding: 15px;
+    }
+
+    .cadastro-card {
+        padding: 25px 20px;
+    }
+
+    .cadastro-card .welcome h2 {
+        font-size: 22px;
+    }
+
+    .cadastro-card .logo h1 {
+        font-size: 25px;
+    }
+}
+.recuperar-container {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #f1f5f9;
+}
+
+.recuperar-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 40px 35px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.recuperar-card .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.recuperar-card .logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.recuperar-card .logo h1 {
+    font-size: 28px;
+    color: #1e293b;
+}
+
+.recuperar-card .logo span {
+    color: #2563eb;
+}
+
+
+
+.recuperar-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dbeafe;
+    color: #2563eb;
+    border-radius: 50%;
+    font-size: 32px;
+}
+
+
+.recuperar-welcome {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.recuperar-welcome h2 {
+    font-size: 24px;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+.recuperar-welcome p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+
+
+.recuperar-input {
+    margin-bottom: 22px;
+}
+
+.recuperar-input label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.recuperar-input input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.recuperar-input input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+
+.recuperar-button {
+    width: 100%;
+    padding: 15px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.recuperar-button:hover {
+    background: #1d4ed8;
+}
+
+
+
+.recuperar-card #mensagem {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+
+.voltar-login {
+    text-align: center;
+    margin-top: 28px;
+}
+
+.voltar-login a {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.voltar-login a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+    .recuperar-container {
+        padding: 16px;
+    }
+
+    .recuperar-card {
+        padding: 30px 22px;
+    }
+
+    .recuperar-card .logo h1 {
+        font-size: 25px;
+    }
+
+    .recuperar-welcome h2 {
+        font-size: 22px;
+    }
+
+    .recuperar-welcome p {
+        font-size: 13px;
+    }
+
+    .recuperar-button {
+        min-height: 48px;
+    }
+}
