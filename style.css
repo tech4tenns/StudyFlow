@@ -2180,3 +2180,164 @@ a:focus-visible {
     opacity: 0.9;
 }
 
+/* ========================================
+   HOME RESPONSIVA PARA CELULARES
+======================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Estrutura principal */
+    .app {
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Menu */
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        position: relative;
+        padding: 14px;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        margin-bottom: 14px;
+    }
+
+    .logo-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .menu-item {
+        padding: 10px;
+        font-size: 13px;
+        gap: 6px;
+    }
+
+    /* Conteúdo */
+    .main {
+        width: 100%;
+        min-width: 0;
+        padding: 20px 14px;
+        box-sizing: border-box;
+    }
+
+    .header {
+        margin-bottom: 18px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    /* Apresentação */
+    .home-welcome {
+        padding: 26px 20px;
+        margin-bottom: 18px;
+        border-radius: 16px;
+    }
+
+    .home-welcome h2 {
+        font-size: 27px;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+    }
+
+    .home-welcome p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* Cartões em coluna */
+    .home-features {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        margin-bottom: 18px;
+    }
+
+    .home-feature {
+        padding: 22px;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .home-feature h3 {
+        font-size: 18px;
+    }
+
+    .home-feature p {
+        font-size: 14px;
+    }
+
+    /* Frase final */
+    .home-footer {
+        padding: 25px 18px;
+        border-radius: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    .home-footer h2 {
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    .home-footer p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+
+/* CELULARES ESTREITOS */
+
+@media screen and (max-width: 420px) {
+
+    .sidebar {
+        padding: 12px;
+    }
+
+    .menu {
+        gap: 6px;
+    }
+
+    .menu-item {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .menu-icon {
+        font-size: 14px;
+    }
+
+    .main {
+        padding: 16px 12px;
+    }
+
+    .home-welcome {
+        padding: 22px 17px;
+    }
+
+    .home-welcome h2 {
+        font-size: 24px;
+    }
+
+    .home-feature {
+        padding: 19px;
+    }
+
+    .home-footer h2 {
+        font-size: 19px;
+    }
+}
+
